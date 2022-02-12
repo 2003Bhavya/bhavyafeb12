@@ -1,16 +1,39 @@
-a=int(input('enter the value of a:'))
-b=int(input('enter the value of b:'))
-if a>b:
-    print('a is greater than b')
-elif a==b:
-    print('a is equal to b')
-elif a<b:
-    print('a is smaller than b')
+oil=180
+flour=120
+dal=150
+drinks=70
+chips=50
+cname=input('enter customer name: ')
+cnum=input('enter customer phone number: ')
+oq=int(input('enter no of oil packets: '))
+fq=int(input('enter no of flour packets: '))
+dq=int(input('enter no of dal packets: '))
+sq=int(input('enter no of  drinks bottles: '))
+cq=int(input('enter no of chips packets: '))
+bill=(oil*oq)+(flour*fq)+(dal*dq)+(drinks*sq)+(chips*cq)
+if bill>=5000:
+      dis=bill*10/100
+      tax=0
+elif bill>=3000:
+     dis=bill*8/100
+     tax=0
+elif bill>=2000:
+     dis=bill*5/100
+elif bill>=1000:
+     dis=bill*3/100
+elif bill>=3000:
+    tax=bill*10/100
 else:
-    print('a is not equal to b')
-
+     tax=bill*18/100
+mainbill=bill-dis+tax
+print('bill amount: ', mainbill)
 
 output
-enter the value of a:2
-enter the value of b:66
-a is smaller than b
+enter customer name: bhavya
+enter customer phone number: 8074441521
+enter no of oil packets: 20
+enter no of flour packets: 10
+enter no of dal packets: 15
+enter no of  drinks bottles: 8
+enter no of chips packets: 12
+bill amount:  7389.0
